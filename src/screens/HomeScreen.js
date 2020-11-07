@@ -18,7 +18,7 @@ const HomeScreen = (props) => {
         }}
         title='Go to components demo'
       />
-      <TouchableOpacity onPress={() => console.log('Op pressed')}>
+      <TouchableOpacity onPress={() => props.navigation.navigate('List')}>
         <Text>Go to list demo</Text>
       </TouchableOpacity>
     </View>
