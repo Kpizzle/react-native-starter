@@ -2,12 +2,10 @@ import React from 'react';
 import { Text, StyleSheet, View, Button } from 'react-native';
 
 const HomeScreen = () => {
-  const name = 'Kyle';
-  const title = (
-    <Text style={styles.text}>Getting started with react native!</Text>
+  const title = <Text style={styles.text}>Components</Text>;
+  const introduction = (
+    <Text style={styles.intro}>Welcome to the new screen!</Text>
   );
-  const introduction = <Text style={styles.intro}>My Name is {name}</Text>;
-
   return (
     <View>
       {title}
