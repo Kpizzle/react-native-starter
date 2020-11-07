@@ -12,12 +12,6 @@ const HomeScreen = () => {
     <View>
       {title}
       {introduction}
-      <Button
-        onPress={() => {
-          console.log('button pressed');
-        }}
-        title='Go to components demo'
-      />
     </View>
   );
 };

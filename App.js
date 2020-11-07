@@ -9,7 +9,7 @@ const navigator = createStackNavigator(
     List: listScreen
   },
   {
-    initialRouteName: "List",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "Debt Down"
     }
