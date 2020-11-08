@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ColourCounter from '../components/ColourCounter'
 
-const ColourChangeScreen = () => {
+const SquareScreen = () => {
   return (
     <View>
       <ColourCounter colour='Red' />
@@ -14,4 +14,4 @@ const ColourChangeScreen = () => {
 
 const styles = StyleSheet.create({});
 
-export default ColourChangeScreen;
+export default SquareScreen;
