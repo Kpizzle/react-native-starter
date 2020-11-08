@@ -4,9 +4,9 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 const HomeScreen = ({ navigation }) => {
   const name = 'Kyle';
   const title = (
-    <Text style={styles.text}>Getting started with react native!</Text>
+    <Text style={styles.text}>Learning React Native</Text>
   );
-  const introduction = <Text style={styles.intro}>My Name is {name}</Text>;
+  const introduction = <Text style={styles.intro}>By Kyle Potter</Text>;
 
   return (
     <View>
@@ -26,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
       />
       <Button
         onPress={() => {
-          navigation.navigate('Screen');
+          navigation.navigate('Image');
         }}
         title='Go to Image Screen'
       />

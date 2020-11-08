@@ -10,12 +10,12 @@ const navigator = createStackNavigator(
     Home: HomeScreen,
     Components: ComponentsScreen,
     List: listScreen,
-    Screen: ImageScreen,
+    Image: ImageScreen,
   },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: 'Debt Down',
+      title: 'Demo App',
     },
   }
 );
