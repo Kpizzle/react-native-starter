@@ -14,9 +14,8 @@ const HomeScreen = ({ navigation }) => {
         style={styles.button}
         onPress={() => {
           navigation.navigate('Components');
-        }}
-      >
-        <Text style={styles.loginText}>Go to components demo</Text>
+        }}>
+        <Text style={styles.loginText}>Components</Text>
       </TouchableOpacity>
       <Button
         onPress={() => {
@@ -60,8 +59,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   button: {
-    marginRight: 40,
-    marginLeft: 40,
+    marginRight: 100,
+    marginLeft: 100,
     marginTop: 10,
     paddingTop: 10,
     paddingBottom: 10,
