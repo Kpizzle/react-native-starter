@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, Button, FlatList } from 'react-native';
 
 const ColourScreen = () => {
   const [colours, setColours] = useState([]);
-  console.log(colours)
+  console.log(colours);
   return (
     <View>
       <Button
@@ -12,9 +12,21 @@ const ColourScreen = () => {
           setColours([...colours, randomRgb()]);
         }}
       />
-      <View
-        style={{ height: 100, width: 100, backgroundColor: randomRgb() }}
-      ></View>
+
+      <FlatList
+        data={colours}
+        renderItem={({ item }) => {
+          return (
+            <View
+              style={{
+                height: 100,
+                width: 100,
+                backgroundColor: randomRgb(),
+              }}
+            />
+          );
+        }}
+      />
     </View>
   );
 };

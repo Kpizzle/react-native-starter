@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 const CounterScreen = () => {
   const [counter, setCounter] = useState(0);
   const [savedCount, setSavedCount] = useState([]);
-  console.log(savedCount)
+  console.log(savedCount);
 
   return (
     <View>
@@ -33,7 +33,7 @@ const CounterScreen = () => {
         <Button
           title='Save Count'
           onPress={() => {
-          setSavedCount([...savedCount, counter])
+            setSavedCount([...savedCount, { value: counter }]);
           }}
         />
       </View>
@@ -42,7 +42,11 @@ const CounterScreen = () => {
           keyExtractor={(savedCount) => savedCount.value}
           data={savedCount}
           renderItem={({ item }) => {
-            return <Text style={styles.textStyle}>{item.value}</Text>;
+            return (
+              <View>
+                <Text>Value: {item.value}</Text>
+              </View>
+            );
           }}
         />
       </View>
