@@ -14,6 +14,7 @@ const ColourScreen = () => {
       />
 
       <FlatList
+      keyExtractor={(item) => item}
         data={colours}
         renderItem={({ item }) => {
           return (
@@ -21,7 +22,7 @@ const ColourScreen = () => {
               style={{
                 height: 100,
                 width: 100,
-                backgroundColor: randomRgb(),
+                backgroundColor: item,
               }}
             />
           );
