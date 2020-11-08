@@ -10,12 +10,14 @@ const HomeScreen = ({ navigation }) => {
     <View>
       {title}
       {introduction}
-      <Button
+      <TouchableOpacity
+        style={styles.button}
         onPress={() => {
           navigation.navigate('Components');
         }}
-        title='Go to components demo'
-      />
+      >
+        <Text style={styles.loginText}>Go to components demo</Text>
+      </TouchableOpacity>
       <Button
         onPress={() => {
           navigation.navigate('List');
@@ -56,6 +58,24 @@ const styles = StyleSheet.create({
   },
   intro: {
     fontSize: 15,
+  },
+  button: {
+    marginRight: 40,
+    marginLeft: 40,
+    marginTop: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: '#1E6738',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+  },
+
+  loginText: {
+    color: '#fff',
+    textAlign: 'center',
+    paddingLeft: 10,
+    paddingRight: 10,
   },
 });
 
