@@ -3,9 +3,7 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
   const name = 'Kyle';
-  const title = (
-    <Text style={styles.text}>Learning React Native</Text>
-  );
+  const title = <Text style={styles.text}>Learning React Native</Text>;
   const introduction = <Text style={styles.intro}>By Kyle Potter</Text>;
 
   return (
@@ -29,6 +27,12 @@ const HomeScreen = ({ navigation }) => {
           navigation.navigate('Image');
         }}
         title='Go to Image Screen'
+      />
+      <Button
+        onPress={() => {
+          navigation.navigate('Count');
+        }}
+        title='Go to Counter Screen'
       />
     </View>
   );
