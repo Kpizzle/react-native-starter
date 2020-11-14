@@ -5,14 +5,22 @@ import ColourCounter from '../components/ColourCounter';
 const COLOUR_INCREMENT = 25;
 
 //Reducer Component
+//You must always return a value from a reducer
 const reducer = (state, action) => {
   switch (action.colorToChange) {
     case 'red':
-      return { ...state, red: state.red + action.amount };
+      return state.red + action.amount > 225 || state.red + action.amount < 0
+        ? state
+        : { ...state, red: state.red + action.amount };
     case 'green':
-      return { ...state, green: state.green + action.amount };
+      return state.green + action.amount > 225 ||
+        state.green + action.amount < 0
+        ? state
+        : { ...state, green: state.green + action.amount };
     case 'blue':
-      return { ...state, blue: state.blue + action.amount };
+      return state.blue + action.amount > 225 || state.blue + action.amount < 0
+        ? state
+        : { ...state, blue: state.blue + action.amount };
     case 'default':
       return;
   }
